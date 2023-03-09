@@ -32,7 +32,6 @@ class _TitleWidgetState extends State<TitleWidget> {
         return styleH2;
       case TitleType.h3:
         return styleH3;
-      default:
     }
   }
 
