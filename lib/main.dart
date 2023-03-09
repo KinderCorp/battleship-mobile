@@ -1,3 +1,4 @@
+import 'package:battleship/shared/input/input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -78,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const InputComponent(title: 'Select a title', placeholder: 'Select a placeholder')
           ],
         ),
       ),
