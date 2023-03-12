@@ -18,3 +18,22 @@ class BSColors {
   Color lightGrey = const Color(0xFFEEEEEE);
   Color white = const Color(0xFFFFFFFF);
 }
+
+class BSHexaColors {
+  String red = '820000';
+  String brown = '873100';
+  String darkOrange = 'F39221';
+  String orange = 'F7B623';
+  String yellow = 'F9D722';
+  String darkPurple2 = '25143C';
+  String darkPurple = '3A1D62';
+  String purple = '7E29C2';
+  String lightPurple = 'A452DA';
+  String pink = 'E290FF';
+  String black = '1C1C1C';
+  String darkGrey2 = '636363';
+  String darkGrey = '808080';
+  String grey = 'A9A9A9';
+  String lightGrey = 'EEEEEE';
+  String white = 'FFFFFF';
+}
