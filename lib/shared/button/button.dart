@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:battleship/constants/design/colors.dart';
+import 'package:battleship/constants/design/font.dart';
 import 'package:flame/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -24,13 +27,13 @@ class _ButtonComponent extends State<ButtonComponent> {
               width: 4,
             )
         ),
-        width: 200,
+        width: 300,
         height: 100,
         child: Stack(
           children: [
             Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
                 color: BSColors().purple,
               ),
               height: 100,
@@ -38,35 +41,63 @@ class _ButtonComponent extends State<ButtonComponent> {
             Container(
               margin: const EdgeInsets.fromLTRB(0, 0, 0, 4),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
                 color: BSColors().purple.brighten(0.3),
               ),
               height: 100,
             ),
             Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
                 color: BSColors().pink,
               ),
-              height: 10,
+              height: 20,
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(0, 4, 0, 0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
                 color: BSColors().lightPurple.brighten(0.2),
               ),
               height: 45,
             ),
-            Container(
-              // margin: ,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                color: BSColors().white,
+            Transform(
+              transform: Matrix4.skewY(-0.4),
+              child: Container(
+                margin: const EdgeInsets.only(top: 5, left: 3),
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(10)),
+                  color: BSColors().white,
+                ),
+                height: 8,
+                width: 8,
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(
+                  sigmaX: 1,
+                  sigmaY: 1,
+                  ),
+                  child: const Opacity(
+                  opacity: 0.5,
+                  ),
+                ),
               ),
-              height: 10,
-              width: 10,
-            )
+            ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: Text(
+                    widget.title.toUpperCase(),
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.visible,
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontFamily: BattleShipFont.policy.titleLarge.toString(),
+                      fontWeight: FontWeight.bold,
+                      color: BSColors().white, fontSize: 30,
+                    ),
+                  ),
+                )
+              ),
           ],
         ),
       ),

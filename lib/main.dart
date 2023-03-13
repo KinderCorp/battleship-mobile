@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            const ButtonComponent(title: 'Select a title', placeholder: 'Select a placeholder')
+            const ButtonComponent(title: 'Select a title')
           ],
         ),
       ),
